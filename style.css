@@ -93,6 +93,7 @@ section {
   width: 100%;
   max-width: 20rem;
   border-radius: 10%;
+  animation: floatImage 3s ease-in-out infinite;
 }
 
 .home-content h3 {
@@ -171,6 +172,7 @@ section {
   width: 100%;
   max-width: 20rem;
   border-radius: 10%;
+  animation: floatImage 3s ease-in-out infinite;
 }
 .about-content {
   /* border: 2px solid rgb(201, 37, 64); */
@@ -264,6 +266,7 @@ span {
   flex: 1 1 20rem;
   position: relative;
   overflow: hidden;
+  border-radius: 10px;
 }
 
 .projects-box img {
@@ -286,4 +289,50 @@ span {
 
 .projects-box:hover .pro {
   transform: translateY(0);
+}
+
+/*! FOOTER */
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 10%;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer p {
+  font-size: 1rem;
+}
+
+.footer-iconTop a {
+  background-color: var(--main-color);
+  padding: 0.7rem;
+  border-radius: 0.7rem;
+  box-shadow: 0 0 1rem var(--main-color);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-iconTop a i {
+  font-size: 2.5rem;
+  color: var(--second-bg-color);
+}
+.footer-iconTop a:hover {
+  border-color: var(--main-color);
+  transform: scale(1.02);
+  box-shadow: 0 0 3rem var(--main-color);
+}
+
+@keyframes floatImage {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2.5rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
